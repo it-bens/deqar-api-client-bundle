@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services
+        http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="ITB\DeqarApiClient\SubmissionApi\Validation\ExistingActivityValidator"
+                 class="ITB\DeqarApiClient\SubmissionApi\Validation\ExistingActivityValidator"
+                 public="true">
+            <argument type="service" id="ITB\DeqarApiClient\WebApi\WebApiClientInterface"/>
+        </service>
+        <service id="ITB\DeqarApiClient\SubmissionApi\Validation\ExistingAgencyValidator"
+                 class="ITB\DeqarApiClient\SubmissionApi\Validation\ExistingAgencyValidator"
+                 public="true">
+            <argument type="service" id="ITB\DeqarApiClient\WebApi\WebApiClientInterface"/>
+        </service>
+        <service id="ITB\DeqarApiClient\SubmissionApi\Validation\ExistingInstitutionValidator"
+                 class="ITB\DeqarApiClient\SubmissionApi\Validation\ExistingInstitutionValidator"
+                 public="true">
+            <argument type="service" id="ITB\DeqarApiClient\WebApi\WebApiClientInterface"/>
+        </service>
+        <service id="ITB\DeqarApiClient\SubmissionApi\Validation\ValidActivityInstitutionProgrammeCombinationValidator"
+                 class="ITB\DeqarApiClient\SubmissionApi\Validation\ValidActivityInstitutionProgrammeCombinationValidator"
+                 public="true">
+            <argument type="service" id="ITB\DeqarApiClient\WebApi\WebApiClientInterface"/>
+        </service>
+        <service id="ITB\DeqarApiClient\SubmissionApi\Validation\WebFilePdfValidator"
+                 class="ITB\DeqarApiClient\SubmissionApi\Validation\WebFilePdfValidator"
+                 public="true">
+            <argument type="service" id="http_client"/>
+        </service>
+    </services>
+</container>

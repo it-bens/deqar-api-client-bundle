@@ -1,0 +1,41 @@
+{
+  "name": "it-bens/deqar-api-client-bundle",
+  "description": "Bundle that provides the deqar-api-client package via Symfony services.",
+  "type": "symfony-bundle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Martin Bens",
+      "email": "martin.bens@it-bens.de"
+    }
+  ],
+  "require": {
+    "php": "^8.0",
+    "it-bens/deqar-api-client": "^0.1",
+    "symfony/config": "^4.4|^5.0",
+    "symfony/dependency-injection": "^4.4|^5.0",
+    "symfony/http-kernel": "^4.4|^5.0"
+  },
+  "require-dev": {
+    "captainhook/plugin-composer": "^5.3",
+    "phpstan/phpstan": "^1.0",
+    "phpunit/phpunit": "^9.5",
+    "roave/security-advisories": "dev-latest",
+    "symfony/yaml": "^4.4|^5.3"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true
+  },
+  "autoload": {
+    "psr-4": { "ITB\\DeqarApiClientBundle\\": "src/" }
+  },
+  "autoload-dev": {
+    "psr-4": { "ITB\\DeqarApiClientBundle\\Tests\\": "tests/" }
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "vendor/bin/captainhook install -f -s"
+    ]
+  }
+}

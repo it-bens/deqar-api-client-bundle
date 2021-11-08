@@ -1,0 +1,4 @@
+web_api_client:
+  deqar_username: '%env(string:DEQAR_API_USERNAME)%'
+  deqar_password: '%env(string:DEQAR_API_PASSWORD)%'
+  cache: 'itb_deqar_api_client.test_cache'

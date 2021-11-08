@@ -1,0 +1,7 @@
+web_api_client:
+  deqar_username: '%env(string:DEQAR_API_USERNAME)%'
+  deqar_password: '%env(string:DEQAR_API_PASSWORD)%'
+submission_api_client:
+  deqar_username: '%env(string:DEQAR_API_USERNAME)%'
+  deqar_password: '%env(string:DEQAR_API_PASSWORD)%'
+  test: true
